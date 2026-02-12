@@ -998,6 +998,7 @@ wazuh_clusterd.debug=0
   {{- end }}
 {{- end }}
     <use_source_ip>no</use_source_ip>
+    <ipv6>yes</ipv6>
     <force>
       <enabled>yes</enabled>
       <key_mismatch>yes</key_mismatch>
@@ -1358,6 +1359,7 @@ wazuh_clusterd.debug=0
     <port>{{ .port }}</port>
   {{- end }}
 {{- end }}
+    <ipv6>yes</ipv6>
     <use_source_ip>no</use_source_ip>
     <force>
       <enabled>yes</enabled>
@@ -1411,7 +1413,9 @@ wazuh_clusterd.debug=0
     <port>514</port>
     <protocol>tcp</protocol>
     <allowed-ips>0.0.0.0/0</allowed-ips>
-    <local_ip>0.0.0.0</local_ip>
+    <allowed-ips>::/0</allowed-ips>
+    <local_ip>::</local_ip>
+    <ipv6>yes</ipv6>
   </remote>
 {{- end }}
 
